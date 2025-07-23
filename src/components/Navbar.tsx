@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-lion-gold to-accent rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-lion-blue to-accent rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">L</span>
             </div>
             <span className="text-xl font-bold text-lion-navy">Lion Homes</span>
@@ -40,7 +40,7 @@ const Navbar = () => {
                   to={item.href}
                   className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                     isActive(item.href)
-                      ? "text-lion-gold bg-lion-gold/10"
+                      ? "text-lion-blue bg-lion-blue/10"
                       : "text-lion-gray hover:text-lion-navy hover:bg-lion-light"
                   }`}
                 >
@@ -54,7 +54,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              className="bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 shadow-gold"
+              className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 shadow-blue"
             >
               Get Started
             </Button>
@@ -86,7 +86,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
                       isActive(item.href)
-                        ? "text-lion-gold bg-lion-gold/10"
+                        ? "text-lion-blue bg-lion-blue/10"
                         : "text-lion-gray hover:text-lion-navy hover:bg-lion-light"
                     }`}
                   >
@@ -97,7 +97,7 @@ const Navbar = () => {
               })}
               <div className="pt-4">
                 <Button 
-                  className="w-full bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold"
+                  className="w-full bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold"
                 >
                   Get Started
                 </Button>

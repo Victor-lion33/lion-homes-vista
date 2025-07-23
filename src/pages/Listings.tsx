@@ -230,7 +230,7 @@ const Listings = () => {
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-gradient-to-r from-lion-gold to-accent text-white">
+                    <Badge className="bg-gradient-to-r from-lion-blue to-accent text-white">
                       {property.status}
                     </Badge>
                   </div>
@@ -311,7 +311,7 @@ const Listings = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold px-8 py-4 text-lg"
+            className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-8 py-4 text-lg"
           >
             Contact Our Agents
           </Button>

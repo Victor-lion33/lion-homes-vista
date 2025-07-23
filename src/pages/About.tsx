@@ -74,7 +74,7 @@ const About = () => {
               const Icon = stat.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-lion-gold to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-lion-blue to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-3xl font-bold text-lion-navy mb-2">{stat.value}</h3>
@@ -95,7 +95,7 @@ const About = () => {
             and help our clients achieve their property dreams. We believe that buying or selling a home should 
             be an exciting and rewarding experience, not a stressful one.
           </p>
-          <blockquote className="text-2xl italic text-lion-gold">
+          <blockquote className="text-2xl italic text-lion-blue">
             "Excellence is not a skill, it's an attitude we bring to every client interaction."
           </blockquote>
         </div>
@@ -115,7 +115,7 @@ const About = () => {
             {team.map((member, index) => (
               <Card key={index} className="border-0 shadow-card hover:shadow-luxury transition-all duration-300">
                 <CardHeader className="text-center pb-4">
-                  <div className="w-24 h-24 bg-gradient-to-br from-lion-gold to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-lion-blue to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span>
                   </div>
                   <CardTitle className="text-xl text-lion-navy">{member.name}</CardTitle>
@@ -129,7 +129,7 @@ const About = () => {
                     <h4 className="font-semibold text-lion-navy mb-2">Specialties:</h4>
                     <div className="flex flex-wrap gap-2 justify-center">
                       {member.specialties.map((specialty, idx) => (
-                        <Badge key={idx} variant="outline" className="border-lion-gold text-lion-gold">
+                        <Badge key={idx} variant="outline" className="border-lion-blue text-lion-blue">
                           {specialty}
                         </Badge>
                       ))}
@@ -160,7 +160,7 @@ const About = () => {
               <Card key={index} className="border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
                   <CardTitle className="text-2xl text-lion-navy flex items-center">
-                    <div className="w-3 h-3 bg-gradient-to-r from-lion-gold to-accent rounded-full mr-3"></div>
+                    <div className="w-3 h-3 bg-gradient-to-r from-lion-blue to-accent rounded-full mr-3"></div>
                     {value.title}
                   </CardTitle>
                 </CardHeader>

@@ -103,7 +103,7 @@ const Contact = () => {
               return (
                 <Card key={index} className="text-center border-0 shadow-card hover:shadow-luxury transition-all duration-300">
                   <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-lion-gold to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-lion-blue to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <CardTitle className="text-xl text-lion-navy">{info.title}</CardTitle>
@@ -247,7 +247,7 @@ const Contact = () => {
 
                     <Button 
                       type="submit" 
-                      className="w-full bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold py-3"
+                      className="w-full bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold py-3"
                     >
                       <Send className="w-4 h-4 mr-2" />
                       Send Message
@@ -271,7 +271,7 @@ const Contact = () => {
                 <CardContent className="p-0">
                   <div className="h-64 bg-gradient-to-br from-lion-light to-lion-gray rounded-lg flex items-center justify-center">
                     <div className="text-center">
-                      <MapPin className="w-12 h-12 text-lion-gold mx-auto mb-4" />
+                      <MapPin className="w-12 h-12 text-lion-blue mx-auto mb-4" />
                       <p className="text-lion-navy font-semibold">Interactive Map</p>
                       <p className="text-lion-gray text-sm">1234 Luxury Avenue, Beverly Hills, CA 90210</p>
                     </div>
@@ -283,10 +283,10 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="border-0 shadow-card hover:shadow-luxury transition-all duration-300">
                   <CardContent className="p-6 text-center">
-                    <Calendar className="w-10 h-10 text-lion-gold mx-auto mb-3" />
+                    <Calendar className="w-10 h-10 text-lion-blue mx-auto mb-3" />
                     <h3 className="font-semibold text-lion-navy mb-2">Schedule a Meeting</h3>
                     <p className="text-sm text-lion-gray mb-4">Book a personalized consultation</p>
-                    <Button variant="outline" className="border-lion-gold text-lion-gold hover:bg-lion-gold hover:text-white">
+                    <Button variant="outline" className="border-lion-blue text-lion-blue hover:bg-lion-blue hover:text-white">
                       Book Now
                     </Button>
                   </CardContent>
@@ -294,10 +294,10 @@ const Contact = () => {
 
                 <Card className="border-0 shadow-card hover:shadow-luxury transition-all duration-300">
                   <CardContent className="p-6 text-center">
-                    <MessageSquare className="w-10 h-10 text-lion-gold mx-auto mb-3" />
+                    <MessageSquare className="w-10 h-10 text-lion-blue mx-auto mb-3" />
                     <h3 className="font-semibold text-lion-navy mb-2">Live Chat</h3>
                     <p className="text-sm text-lion-gray mb-4">Get instant answers to your questions</p>
-                    <Button variant="outline" className="border-lion-gold text-lion-gold hover:bg-lion-gold hover:text-white">
+                    <Button variant="outline" className="border-lion-blue text-lion-blue hover:bg-lion-blue hover:text-white">
                       Start Chat
                     </Button>
                   </CardContent>
@@ -317,7 +317,7 @@ const Contact = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold"
+            className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold"
           >
             <Phone className="w-5 h-5 mr-2" />
             +1 (555) 911-LION

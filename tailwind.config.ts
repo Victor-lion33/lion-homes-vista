@@ -53,7 +53,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				lion: {
-					gold: 'hsl(var(--lion-gold))',
+					blue: 'hsl(var(--lion-blue))',
 					navy: 'hsl(var(--lion-navy))',
 					gray: 'hsl(var(--lion-gray))',
 					light: 'hsl(var(--lion-light))'

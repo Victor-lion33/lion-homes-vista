@@ -78,7 +78,7 @@ const Home = () => {
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Find Your
-            <span className="block bg-gradient-to-r from-lion-gold to-accent bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-lion-blue to-accent bg-clip-text text-transparent">
               Dream Home
             </span>
           </h1>
@@ -90,7 +90,7 @@ const Home = () => {
             <Link to="/listings">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 shadow-gold"
+                className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 shadow-blue"
               >
                 View Listings
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -125,7 +125,7 @@ const Home = () => {
               return (
                 <Card key={index} className="text-center border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2">
                   <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-lion-gold to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-lion-blue to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <CardTitle className="text-xl text-lion-navy">{feature.title}</CardTitle>
@@ -162,7 +162,7 @@ const Home = () => {
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-gradient-to-r from-lion-gold to-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-lion-blue to-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {property.price}
                     </span>
                   </div>
@@ -194,7 +194,7 @@ const Home = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-lion-gold text-lion-gold hover:bg-lion-gold hover:text-white px-8 py-3"
+                className="border-lion-blue text-lion-blue hover:bg-lion-blue hover:text-white px-8 py-3"
               >
                 View All Properties
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -215,7 +215,7 @@ const Home = () => {
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold px-8 py-4 text-lg"
+                className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-8 py-4 text-lg"
               >
                 Get Started Today
               </Button>

@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 45 86% 58%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -34,23 +34,23 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 45 86% 58%;
+    --ring: 217 91% 60%;
 
-    /* Custom Lion Homes brand colors */
-    --lion-gold: 45 86% 58%;
+    /* Custom Lion Homes brand colors - Blue Theme */
+    --lion-blue: 217 91% 60%;
     --lion-navy: 220 13% 13%;
     --lion-gray: 215 16% 47%;
     --lion-light: 210 40% 96%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 13% 13%) 0%, hsl(220 13% 25%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 86% 58%) 0%, hsl(45 75% 68%) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 70%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 99%) 0%, hsl(210 40% 98%) 100%);
     
     /* Shadows */
     --shadow-luxury: 0 25px 50px -12px hsl(220 13% 13% / 0.25);
     --shadow-card: 0 4px 6px -1px hsl(220 13% 13% / 0.1), 0 2px 4px -1px hsl(220 13% 13% / 0.06);
-    --shadow-gold: 0 10px 30px -5px hsl(45 86% 58% / 0.3);
+    --shadow-blue: 0 10px 30px -5px hsl(217 91% 60% / 0.3);
 
     --radius: 0.5rem;
 

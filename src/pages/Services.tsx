@@ -166,10 +166,10 @@ const Services = () => {
               return (
                 <Card key={index} className="border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 h-full">
                   <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-lion-gold to-accent rounded-xl flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-lion-blue to-accent rounded-xl flex items-center justify-center mb-4">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <Badge variant="secondary" className="bg-lion-gold/10 text-lion-gold w-fit">
+                    <Badge variant="secondary" className="bg-lion-blue/10 text-lion-blue w-fit">
                       {service.highlight}
                     </Badge>
                     <CardTitle className="text-2xl text-lion-navy">{service.title}</CardTitle>
@@ -181,7 +181,7 @@ const Services = () => {
                     <ul className="space-y-3">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-lion-gold mr-3 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-lion-blue mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-lion-gray">{feature}</span>
                         </li>
                       ))}
@@ -215,7 +215,7 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-lion-gold to-accent rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-lion-blue to-accent rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                   {step.step}
                 </div>
                 <h3 className="text-lg font-semibold text-lion-navy mb-3">{step.title}</h3>
@@ -223,7 +223,7 @@ const Services = () => {
                 
                 {index < process.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-full w-full">
-                    <div className="w-full h-0.5 bg-gradient-to-r from-lion-gold to-accent transform -translate-x-8"></div>
+                    <div className="w-full h-0.5 bg-gradient-to-r from-lion-blue to-accent transform -translate-x-8"></div>
                   </div>
                 )}
               </div>
@@ -248,7 +248,7 @@ const Services = () => {
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-lion-gold fill-current" />
+                      <Star key={i} className="w-5 h-5 text-lion-blue fill-current" />
                     ))}
                   </div>
                   <blockquote className="text-lion-gray italic mb-4 leading-relaxed">
@@ -276,7 +276,7 @@ const Services = () => {
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold px-8 py-4 text-lg"
+                className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-8 py-4 text-lg"
               >
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />

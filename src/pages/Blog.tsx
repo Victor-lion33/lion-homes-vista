@@ -160,7 +160,7 @@ const Blog = () => {
               {featuredPosts.map((post) => (
                 <Card key={post.id} className="border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                   <div className="relative">
-                    <div className="h-48 bg-gradient-to-br from-lion-gold to-accent flex items-center justify-center">
+                    <div className="h-48 bg-gradient-to-br from-lion-blue to-accent flex items-center justify-center">
                       <span className="text-white text-6xl font-bold opacity-20">{post.category.charAt(0)}</span>
                     </div>
                     <Badge className="absolute top-4 left-4 bg-white text-lion-navy">
@@ -188,7 +188,7 @@ const Blog = () => {
                     <p className="text-lion-gray mb-4 line-clamp-3">{post.excerpt}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge variant="secondary" className="bg-lion-gold/10 text-lion-gold">
+                      <Badge variant="secondary" className="bg-lion-blue/10 text-lion-blue">
                         {post.category}
                       </Badge>
                       {post.tags.slice(0, 2).map((tag, idx) => (
@@ -226,7 +226,7 @@ const Blog = () => {
             {regularPosts.map((post) => (
               <Card key={post.id} className="border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                 <div className="h-32 bg-gradient-to-br from-lion-light to-lion-gray flex items-center justify-center">
-                  <Tag className="w-8 h-8 text-lion-gold" />
+                  <Tag className="w-8 h-8 text-lion-blue" />
                 </div>
                 
                 <CardContent className="p-6 flex-1 flex flex-col">
@@ -245,7 +245,7 @@ const Blog = () => {
                   <p className="text-lion-gray mb-4 line-clamp-3 flex-1">{post.excerpt}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="secondary" className="bg-lion-gold/10 text-lion-gold text-xs">
+                    <Badge variant="secondary" className="bg-lion-blue/10 text-lion-blue text-xs">
                       {post.category}
                     </Badge>
                   </div>
@@ -253,7 +253,7 @@ const Blog = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-lion-gray">{formatDate(post.date)}</span>
                     <Link to={`/blog/${post.id}`}>
-                      <Button variant="outline" size="sm" className="border-lion-gold text-lion-gold hover:bg-lion-gold hover:text-white">
+                      <Button variant="outline" size="sm" className="border-lion-blue text-lion-blue hover:bg-lion-blue hover:text-white">
                         Read More
                         <ArrowRight className="ml-1 w-3 h-3" />
                       </Button>
@@ -288,7 +288,7 @@ const Blog = () => {
               className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/60"
             />
             <Button 
-              className="bg-gradient-to-r from-lion-gold to-accent hover:from-accent hover:to-lion-gold text-white font-semibold px-6"
+              className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-6"
             >
               Subscribe
             </Button>
