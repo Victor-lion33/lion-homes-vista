@@ -221,16 +221,20 @@ const Listings = () => {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedProperties.map((property) => (
-              <Card key={property.id} className="overflow-hidden border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-1">
-                <div className="relative">
+            {sortedProperties.map((property, index) => (
+              <Card 
+                key={property.id} 
+                className={`overflow-hidden border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-1 group animate-fade-in-up`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative overflow-hidden">
                   <img 
                     src={property.image} 
                     alt={property.title}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-gradient-to-r from-lion-blue to-accent text-white">
+                    <Badge className="bg-gradient-to-r from-lion-blue to-accent text-white animate-bounce-in">
                       {property.status}
                     </Badge>
                   </div>
@@ -238,20 +242,20 @@ const Listings = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="w-10 h-10 p-0 bg-white/90 hover:bg-white border-0"
+                      className="w-10 h-10 p-0 bg-white/90 hover:bg-white border-0 hover:scale-110 transition-transform duration-300"
                     >
                       <Heart className="w-4 h-4" />
                     </Button>
                   </div>
                   <div className="absolute bottom-4 left-4">
-                    <span className="bg-white/95 backdrop-blur-sm text-lion-navy px-3 py-1 rounded-full text-lg font-bold">
+                    <span className="bg-white/95 backdrop-blur-sm text-lion-navy px-3 py-1 rounded-full text-lg font-bold animate-glow">
                       {formatPrice(property.price)}
                     </span>
                   </div>
                 </div>
                 
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-lion-navy mb-2">{property.title}</h3>
+                  <h3 className="text-xl font-bold text-lion-navy mb-2 group-hover:text-lion-blue transition-colors duration-300">{property.title}</h3>
                   <p className="text-lion-gray mb-4 flex items-center">
                     <MapPin className="w-4 h-4 mr-2" />
                     {property.location}
@@ -278,13 +282,13 @@ const Listings = () => {
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {property.features.map((feature, idx) => (
-                      <Badge key={idx} variant="secondary" className="bg-lion-light text-lion-navy text-xs">
+                      <Badge key={idx} variant="secondary" className="bg-lion-light text-lion-navy text-xs hover:bg-lion-blue hover:text-white transition-colors duration-300">
                         {feature}
                       </Badge>
                     ))}
                   </div>
 
-                  <Button className="w-full bg-lion-navy hover:bg-lion-navy/90 text-white">
+                  <Button className="w-full bg-lion-navy hover:bg-lion-navy/90 text-white hover:scale-105 transform transition-all duration-300">
                     View Details
                   </Button>
                 </CardContent>

@@ -76,21 +76,21 @@ const Home = () => {
         </div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
             Find Your
-            <span className="block bg-gradient-to-r from-lion-blue to-accent bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-lion-blue to-accent bg-clip-text text-transparent animate-glow">
               Dream Home
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto animate-fade-in-up [animation-delay:0.2s]">
             Discover luxury properties with Lion Homes - where exceptional service meets extraordinary properties
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up [animation-delay:0.4s]">
             <Link to="/listings">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 shadow-blue"
+                className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 shadow-blue hover:scale-105 transform"
               >
                 View Listings
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -100,7 +100,7 @@ const Home = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/20 text-white hover:bg-white hover:text-lion-navy px-8 py-4 text-lg rounded-lg transition-all duration-300"
+                className="border-white/20 text-white hover:bg-white hover:text-lion-navy px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 transform"
               >
                 Contact Agent
               </Button>
@@ -112,7 +112,7 @@ const Home = () => {
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-background to-lion-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-lion-navy mb-4">Why Choose Lion Homes</h2>
             <p className="text-xl text-lion-gray max-w-2xl mx-auto">
               Experience the difference with our commitment to excellence and personalized service
@@ -123,12 +123,16 @@ const Home = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <Card key={index} className="text-center border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2">
+                <Card 
+                  key={index} 
+                  className={`text-center border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 group animate-scale-in`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-lion-blue to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-lion-blue to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <CardTitle className="text-xl text-lion-navy">{feature.title}</CardTitle>
+                    <CardTitle className="text-xl text-lion-navy group-hover:text-lion-blue transition-colors duration-300">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-lion-gray">
@@ -145,7 +149,7 @@ const Home = () => {
       {/* Featured Properties */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-lion-navy mb-4">Featured Properties</h2>
             <p className="text-xl text-lion-gray max-w-2xl mx-auto">
               Discover our handpicked selection of premium properties
@@ -153,22 +157,26 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProperties.map((property) => (
-              <Card key={property.id} className="overflow-hidden border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2">
+            {featuredProperties.map((property, index) => (
+              <Card 
+                key={property.id} 
+                className={`overflow-hidden border-0 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 group animate-scale-in`}
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={property.image} 
                     alt={property.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-gradient-to-r from-lion-blue to-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-lion-blue to-accent text-white px-3 py-1 rounded-full text-sm font-semibold animate-glow">
                       {property.price}
                     </span>
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-lion-navy mb-2">{property.title}</h3>
+                  <h3 className="text-xl font-bold text-lion-navy mb-2 group-hover:text-lion-blue transition-colors duration-300">{property.title}</h3>
                   <p className="text-lion-gray mb-4 flex items-center">
                     <MapPin className="w-4 h-4 mr-1" />
                     {property.location}
@@ -179,7 +187,7 @@ const Home = () => {
                     <span>{property.sqft} sqft</span>
                   </div>
                   <Link to={`/listings/${property.id}`}>
-                    <Button className="w-full bg-lion-navy hover:bg-lion-navy/90 text-white">
+                    <Button className="w-full bg-lion-navy hover:bg-lion-navy/90 text-white hover:scale-105 transform transition-all duration-300">
                       View Details
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>

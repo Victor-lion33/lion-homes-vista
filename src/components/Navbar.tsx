@@ -19,15 +19,15 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 animate-slide-in-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-lion-blue to-accent rounded-lg flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-lion-blue to-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-bounce-in">
               <span className="text-white font-bold text-xl">L</span>
             </div>
-            <span className="text-xl font-bold text-lion-navy">Lion Homes</span>
+            <span className="text-xl font-bold text-lion-navy group-hover:text-lion-blue transition-colors duration-300">Lion Homes</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -38,9 +38,9 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 transform relative after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-lion-blue after:transition-all after:duration-300 hover:after:w-full ${
                     isActive(item.href)
-                      ? "text-lion-blue bg-lion-blue/10"
+                      ? "text-lion-blue bg-lion-blue/10 after:w-full"
                       : "text-lion-gray hover:text-lion-navy hover:bg-lion-light"
                   }`}
                 >
@@ -54,7 +54,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 shadow-blue"
+              className="bg-gradient-to-r from-lion-blue to-accent hover:from-accent hover:to-lion-blue text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 shadow-blue hover:scale-105 transform"
             >
               Get Started
             </Button>
